@@ -20,4 +20,6 @@ app.use("/", adminRouter);
 app.use(middleware.pageNotFound);
 app.use(middleware.error);
 
+app.use(express.static('/public/img', config.headerStaticFiles));
+
 module.exports = app;

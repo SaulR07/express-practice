@@ -9,6 +9,7 @@ const express = require("express");
 const router = express.Router();
 const controller = require("../controller/AdminController");
 
-router.get("/", controller.getIndex);
+router.get('/', controller.getIndex);
+router.get('/img', controller.getImage);
 
 module.exports = router;

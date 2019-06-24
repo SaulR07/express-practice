@@ -26,6 +26,10 @@ exports.logger = (req, res, next) => {
   next();
 };
 
+/**
+ * Function for requests not found
+ * @author Saul Reyes Medina <saulreyesm@outlook.com>
+ */
 exports.pageNotFound = (req, res, next) => {
   res.status(404).send("Pagina no encontrada");
 };
@@ -39,3 +43,9 @@ exports.error = (error, req, res, next) => {
   console.error(error.message);
   res.status(500).send("A ocurrido un error!");
 };
+
+
+/**
+ * Function to set response headers
+ * @author Saul Reyes Medina <saulreyesm@outlook.com>
+ */
