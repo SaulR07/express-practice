@@ -2,8 +2,9 @@
  * Controller class for administrator requests.
  * @author Saul Reyes Medina <saulreyesm@outlook.com>
  */
+"use strict";
 
-var path = require('path');
+var path = require("path");
 
 /**
  * Function for get index

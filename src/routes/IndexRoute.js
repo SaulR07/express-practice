@@ -3,13 +3,13 @@
  * @author Saul Reyes Medina <saulreyesm@outlook.com>
  */
 
-'use stric'
+"use strict";
 
 const express = require("express");
 const router = express.Router();
-const controller = require("../controller/AdminController");
+const admincontroller = require("../controller/AdminController");
 
-router.get('/', controller.getIndex);
-router.get('/img', controller.getImage);
+router.get("/", admincontroller.getIndex);
+router.get("/img", admincontroller.getImage);
 
 module.exports = router;

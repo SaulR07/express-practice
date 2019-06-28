@@ -3,10 +3,12 @@
  * @author Saul Reyes Medina <saulreyesm@outlook.com>
  */
 
+"use strict";
+
 /**
  * Function for conver Date to String
  * @author Saul Reyes Medina <saulreyesm@outlook.com>
- * @returns Date string
+ * @returns {String} Date in string
  */
 exports.getDateString = (date = new Date()) => {
   let options = {

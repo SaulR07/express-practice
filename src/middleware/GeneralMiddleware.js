@@ -12,7 +12,6 @@ const dateUtils = require("../Utils/DateUtils");
  * @author Saul Reyes Medina <saulreyesm@outlook.com>
  */
 exports.logger = (req, res, next) => {
-  console.log(req.body);
   console.log(
     dateUtils.getDateString() +
       " Petición de entrada " +
@@ -20,7 +19,7 @@ exports.logger = (req, res, next) => {
       " tipo " +
       req.method +
       " con los parametros (" +
-      JSON.stringify(req.params) +
+      JSON.stringify(req.body) +
       ")"
   );
   next();
@@ -30,7 +29,7 @@ exports.logger = (req, res, next) => {
  * Function for requests not found
  * @author Saul Reyes Medina <saulreyesm@outlook.com>
  */
-exports.pageNotFound = (req, res, next) => {
+exports.pageNotFound = (req, res) => {
   res.status(404).send("Pagina no encontrada");
 };
 
@@ -38,14 +37,13 @@ exports.pageNotFound = (req, res, next) => {
  * Function for controller erros
  * @author Saul Reyes Medina <saulreyesm@outlook.com>
  */
-exports.error = (error, req, res, next) => {
+exports.error = (error, req, res) => {
   console.error(error.stack);
   console.error(error.message);
   res.status(500).send("A ocurrido un error!");
 };
 
-
 /**
- * Function to set response headers
+ * // TODO: Function to set response headers
  * @author Saul Reyes Medina <saulreyesm@outlook.com>
  */
